@@ -1,4 +1,4 @@
-# Nginx Proxy Manager
+# 1. Nginx Proxy Manager
 
 If you are not using proxmox or want to install this on a existing Alpine box, you can run the setup script itself.
 
@@ -15,7 +15,7 @@ wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/npm
 
 
 
-## Laravel Octane For Centos 9 Stream
+# 2. Laravel Octane For Centos 9 Stream
 
 ```bash
 wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/laravel/octane.sh | sh
