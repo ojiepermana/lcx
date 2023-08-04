@@ -7,3 +7,4 @@ sudo dnf install -y php-cli
 sudo dnf install pcre-devel gcc make gcc-c++ libcurl-devel c-ares-devel php-devel php-pear openssl-devel -y
 sudo pecl install swoole
 sudo dnf install php-swoole -y
+sudo dnf install php-pecl-mongodb -y
