@@ -1,4 +1,4 @@
-#NPM
+# Nginx Proxy Manager
 
 If you are not using proxmox or want to install this on a existing Alpine box, you can run the setup script itself.
 
