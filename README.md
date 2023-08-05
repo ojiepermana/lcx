@@ -20,3 +20,9 @@ wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/npm
 ```bash
 wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/laravel/octane.sh | sh
 ```
+
+# 3. PHP 8.2 Nginx Centos 9 Stream
+
+```bash
+wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/nginx.sh | sh
+```
