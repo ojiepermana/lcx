@@ -4,6 +4,10 @@ sudo dnf module enable php:remi-8.2 -y
 sudo dnf install nginx 
 sudo dnf install -y php php-fpm
 
+sudo systemctl enable php-fpm
+sudo systemctl start php-fpm
+sudo systemctl status php-fpm
+
 sudo dnf install firewalld -y
 sudo systemctl start firewalld
 sudo systemctl enable firewalld
