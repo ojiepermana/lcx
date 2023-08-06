@@ -25,3 +25,4 @@ mysql --version
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
 sudo systemctl restart mysqld
+sudo systemctl status mysqld
