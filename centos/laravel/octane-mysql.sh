@@ -14,10 +14,8 @@ yes '' | sudo pecl install swoole
 sudo dnf install php-swoole -y
 sudo dnf install php-pecl-mongodb -y
 
-
-wget https://repo.mysql.com//mysql80-community-release-el9-1.noarch.rpm
-sudo dnf install mysql80-community-release-el9-1.noarch.rpm -y
-sudo dnf install mysql-community-server -y
+sudo dnf update -y
+sudo dnf install mysql mysql-server
 
 
 #version
