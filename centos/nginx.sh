@@ -16,3 +16,12 @@ systemctl status firewalld
 sudo firewall-cmd --permanent --zone=public --add-service=http 
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --reload
+
+
+
+sudo dnf update -y
+sudo dnf install mysql mysql-server -y
+mysql --version
+sudo systemctl start mysqld
+sudo systemctl enable mysqld
+sudo systemctl restart mysqld
