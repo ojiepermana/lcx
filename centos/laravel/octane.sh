@@ -9,6 +9,7 @@ wget -qO - https://rpm.nodesource.com/setup_18.x | bash -sudo
 dnf install -y  nodejs
 npm install -g @angular/cli
 
+
 #swoole
 sudo dnf install pcre-devel gcc make gcc-c++ libcurl-devel c-ares-devel php-devel php-pear openssl-devel -y
 yes '' | sudo pecl install swoole
