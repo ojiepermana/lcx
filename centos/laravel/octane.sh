@@ -4,6 +4,10 @@ sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
 sudo dnf module enable php:remi-8.2 -y
 sudo dnf install -y php-cli
 
+
+wget -qO - https://deb.nodesource.com/setup_18.x | bash -sudo 
+dnf install -y -q --no-install-recommends nodejs
+
 #swoole
 sudo dnf install pcre-devel gcc make gcc-c++ libcurl-devel c-ares-devel php-devel php-pear openssl-devel -y
 yes '' | sudo pecl install swoole
