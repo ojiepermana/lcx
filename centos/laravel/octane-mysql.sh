@@ -6,6 +6,7 @@ sudo dnf install -y php-cli php-mysqlnd php-zip
 
 wget -qO - https://rpm.nodesource.com/setup_18.x | bash -sudo 
 dnf install -y  nodejs
+npm install -g @angular/cli
 
 #composer
 wget https://getcomposer.org/installer -O composer-installer.php
