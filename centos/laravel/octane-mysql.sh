@@ -4,7 +4,7 @@ sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
 sudo dnf module enable php:remi-8.2 -y
 sudo dnf install -y php-cli php-mysqlnd php-zip
 
-wget -qO - https://deb.nodesource.com/setup_18.x | bash -sudo 
+wget -qO - https://rpm.nodesource.com/setup_18.x | bash -sudo 
 dnf install -y -q --no-install-recommends nodejs
 
 #composer
