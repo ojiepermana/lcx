@@ -5,7 +5,7 @@ sudo dnf module enable php:remi-8.2 -y
 sudo dnf install -y php-cli php-mysqlnd php-zip
 
 wget -qO - https://rpm.nodesource.com/setup_18.x | bash -sudo 
-dnf install -y -q --no-install-recommends nodejs
+dnf install -y  nodejs
 
 #composer
 wget https://getcomposer.org/installer -O composer-installer.php
