@@ -19,6 +19,12 @@ sudo dnf install php-swoole -y
 sudo dnf install php-pecl-mongodb -y
 
 
+sudo systemctl start mysqld
+sudo systemctl enable mysqld
+sudo systemctl restart mysqld
+sudo systemctl status mysqld
+
 #version
 php -v
 composer --version
+mysql --version
