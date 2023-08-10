@@ -1,10 +1,9 @@
 sudo dnf update -y
-sudo dnf install supervisor wget curl zip unzip git epel-release ncurses -y
+sudo dnf install nginx nano wget curl zip unzip git epel-release ncurses -y
 
 #php php-fpm
 sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
 sudo dnf module enable php:remi-8.2 -y
-sudo dnf install nginx zip unzip git curl nano
 sudo dnf install -y php php-fpm
 
 sudo systemctl enable php-fpm
