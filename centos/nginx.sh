@@ -1,4 +1,7 @@
-sudo dnf update
+sudo dnf update -y
+sudo dnf install supervisor wget curl zip unzip git epel-release ncurses -y
+
+#php php-fpm
 sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
 sudo dnf module enable php:remi-8.2 -y
 sudo dnf install nginx zip unzip git curl nano
@@ -21,8 +24,16 @@ sudo firewall-cmd --reload
 
 sudo dnf update -y
 sudo dnf install mysql mysql-server -y
-mysql --version
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
 sudo systemctl restart mysqld
 sudo systemctl status mysqld
+
+
+
+
+
+#version
+php -v
+composer --version
+mysql --version
