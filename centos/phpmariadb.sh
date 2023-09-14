@@ -21,6 +21,8 @@ systemctl status firewalld
 
 sudo firewall-cmd --permanent --zone=public --add-service=http 
 sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --permanent --add-port=81-89/tcp
+
 sudo firewall-cmd --reload
 
 
