@@ -27,7 +27,7 @@ wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/cen
 wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/nginx.sh | sh
 ```
 
-# 3. PHP 8.0 Nginx Centos 9 Stream MariaDB
+# 3. PHP 8.2 Nginx Centos 9 Stream MariaDB 10.6
 
 ```bash
 wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/phpmariadb.sh | sh
