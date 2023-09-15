@@ -1,5 +1,5 @@
 sudo dnf update -y
-sudo dnf install nginx nano wget curl zip unzip git epel-release ncurses -y
+sudo dnf install nginx nano wget curl zip unzip git epel-release ncurses openssh-server -y
 
 sudo dnf install nginx -y
 sudo systemctl start nginx
