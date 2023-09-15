@@ -1,5 +1,5 @@
 sudo dnf update -y
-sudo dnf install supervisor wget curl zip unzip git epel-release ncurses mysql mysql-server  -y
+sudo dnf install supervisor wget curl zip unzip git epel-release ncurses mysql mysql-server openssh-server  -y
 
 #php
 sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
