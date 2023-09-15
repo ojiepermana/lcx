@@ -40,3 +40,10 @@ wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/cen
 ```bash
 wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/laravel/octane-mysql.sh | sh
 ```
+
+
+# 6. Moodle Nginx Centos 9 Stream Mariadb 10.6
+
+```bash
+wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/moodle.sh | sh
+```
