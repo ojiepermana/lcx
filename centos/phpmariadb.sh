@@ -22,7 +22,6 @@ systemctl status firewalld
 sudo firewall-cmd --permanent --zone=public --add-service=http 
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --permanent --add-port=81-89/tcp
-
 sudo firewall-cmd --reload
 
 
@@ -33,7 +32,8 @@ curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
 sudo bash mariadb_repo_setup --mariadb-server-version=10.6
 
 sudo dnf install MariaDB-server MariaDB-client -y
-
+sudo firewall-cmd --permanent --add-port=3306/tcp
+sudo firewall-cmd --reload
 
 systemctl enable mariadb
 
