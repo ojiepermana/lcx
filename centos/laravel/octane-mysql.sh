@@ -35,6 +35,9 @@ sudo systemctl restart mysqld
 sudo firewall-cmd --permanent --add-port=3306/tcp
 sudo firewall-cmd --reload
 
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+
 #version
 php -v
 composer --version
