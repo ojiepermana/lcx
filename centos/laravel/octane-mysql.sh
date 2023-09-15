@@ -18,10 +18,22 @@ yes '' | sudo pecl install swoole
 sudo dnf install php-swoole -y
 sudo dnf install php-pecl-mongodb -y
 
+sudo dnf install firewalld -y
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+systemctl status firewalld
+
+sudo firewall-cmd --permanent --zone=public --add-service=http 
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --permanent --add-port=81-89/tcp
+sudo firewall-cmd --reload
 
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
 sudo systemctl restart mysqld
+
+sudo firewall-cmd --permanent --add-port=3306/tcp
+sudo firewall-cmd --reload
 
 #version
 php -v
