@@ -28,7 +28,13 @@ sudo firewall-cmd --reload
 
 
 sudo dnf update -y
-sudo dnf install mariadb-server -y
+
+curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
+sudo bash mariadb_repo_setup --mariadb-server-version=10.6
+
+sudo dnf install MariaDB-server MariaDB-client -y
+
+
 systemctl enable mariadb
 
 systemctl start mariadb
