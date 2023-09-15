@@ -27,3 +27,6 @@ sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --permanent --add-port=81-89/tcp
 sudo firewall-cmd --reload
 
+
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
