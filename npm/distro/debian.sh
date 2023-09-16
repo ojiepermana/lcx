@@ -101,7 +101,6 @@ runcmd apt update && apt install -y -q --no-install-recommends openresty
 log "Installing nodejs"
 
 runcmd apt update
-runcmd rm /etc/apt/keyrings/nodesource.gpg
 runcmd apt install -y ca-certificates curl gnupg
 runcmd mkdir -p /etc/apt/keyrings
 runcmd curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
