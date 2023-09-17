@@ -104,6 +104,7 @@ runcmd apt update && apt install -y -q --no-install-recommends openresty
 # runcmd npm install --global yarn
 
 log "Installing nodejs"
+runcmd rm /etc/apt/sources.list.d/nodesource.list
 runcmd apt update
 runcmd apt install -y ca-certificates curl gnupg
 runcmd mkdir -p /etc/apt/keyrings
