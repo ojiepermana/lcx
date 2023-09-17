@@ -44,9 +44,9 @@ trapexit() {
   fi
   
   # Cleanup
-  apt remove --purge -y $DEVDEPS -qq &>/dev/null
-  apt autoremove -y -qq &>/dev/null
-  apt clean
+  apt-get remove --purge -y $DEVDEPS -qq &>/dev/null
+  apt-get autoremove -y -qq &>/dev/null
+  apt-get clean
   rm -rf $TEMPDIR
   rm -rf /root/.cache
 }
@@ -69,13 +69,13 @@ fi
 
 # Install dependencies
 log "Installing dependencies"
-runcmd apt update
+runcmd apt-get update
 export DEBIAN_FRONTEND=noninteractive
-runcmd 'apt install -y --no-install-recommends $DEVDEPS gnupg openssl ca-certificates apache2-utils logrotate'
+runcmd 'apt-get install -y --no-install-recommends $DEVDEPS gnupg openssl ca-certificates apache2-utils logrotate'
 
 # Install Python
 log "Installing python"
-runcmd apt install -y -q --no-install-recommends python3 python3-distutils python3-venv
+runcmd apt-get install -y -q --no-install-recommends python3 python3-distutils python3-venv
 python3 -m venv /opt/certbot/
 export PATH=/opt/certbot/bin:$PATH
 grep -qo "/opt/certbot" /etc/environment || echo "$PATH" > /etc/environment
@@ -95,23 +95,12 @@ if [ $DISTRO_ID = "ubuntu" ]; then
 else
   echo "deb [trusted=yes] http://openresty.org/package/$DISTRO_ID ${_distro_release:-bullseye} openresty" | tee /etc/apt/sources.list.d/openresty.list
 fi
-runcmd apt update && apt install -y -q --no-install-recommends openresty
+runcmd apt-get update && apt-get install -y -q --no-install-recommends openresty
 
 # Install nodejs
-# log "Installing nodejs"
-# runcmd wget -qO - https://deb.nodesource.com/setup_16.x | bash -
-# runcmd apt install -y -q --no-install-recommends nodejs
-# runcmd npm install --global yarn
-
 log "Installing nodejs"
-runcmd apt update
-runcmd apt install -y ca-certificates curl gnupg
-runcmd mkdir -p /etc/apt/keyrings
-runcmd curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-NODE_MAJOR=18
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
-runcmd apt update -y
-runcmd  apt install -y -q --no-install-recommends nodejs
+runcmd wget -qO - https://deb.nodesource.com/setup_16.x | bash -
+runcmd apt-get install -y -q --no-install-recommends nodejs
 runcmd npm install --global yarn
 
 # Get latest version information for nginx-proxy-manager
