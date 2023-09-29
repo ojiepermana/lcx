@@ -8,7 +8,7 @@ sudo systemctl enable nginx
 #php php-fpm
 sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
 sudo dnf module enable php:remi-8.2 -y
-sudo dnf install -y php php-fpm
+sudo dnf install -y php php-fpm php-ldap php-xml php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt php-curl php-pspell php-zip php-common
 
 sudo systemctl enable php-fpm
 sudo systemctl start php-fpm
