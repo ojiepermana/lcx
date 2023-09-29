@@ -42,7 +42,7 @@ wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/cen
 ```
 
 
-# 6. Moodle Nginx Centos 9 Stream Mariadb 10.6
+# 6. Moodle Nginx Centos 9 Stream Mysql
 
 ```bash
 wget --no-cache -qO - https://raw.githubusercontent.com/ojiepermana/lcx/main/centos/moodle.sh | sh
