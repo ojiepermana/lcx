@@ -7,7 +7,7 @@ sudo systemctl enable nginx
 
 #php php-fpm
 sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
-sudo dnf module enable php:remi-7.4 -y
+sudo dnf module enable php:remi-8.2 -y
 sudo dnf install -y php php-fpm
 
 sudo systemctl enable php-fpm
@@ -28,17 +28,6 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 
 
 sudo dnf update -y
-
-curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
-sudo bash mariadb_repo_setup --mariadb-server-version=10.6
-
-sudo dnf install MariaDB-server MariaDB-client -y
-sudo firewall-cmd --permanent --add-port=3306/tcp
-sudo firewall-cmd --reload
-
-systemctl enable mariadb
-systemctl start mariadb
-
 
 #version
 php -v
